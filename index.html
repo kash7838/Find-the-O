@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find the O Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+        .box:hover {
+            background: #ddd;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Find the O</h1>
+
+<div class="container">
+    <div class="box" onclick="makeGuess(0)"></div>
+    <div class="box" onclick="makeGuess(1)"></div>
+    <div class="box" onclick="makeGuess(2)"></div>
+</div>
+
+<div id="message">Tap a box to start</div>
+
+<script>
+    let arr = ['X', 'O', 'X'];
+
+    function shuffleList() {
+        arr.sort(() => Math.random() - 0.5);
+    }
+
+    function resetGame() {
+        shuffleList();
+        document.querySelectorAll('.box').forEach(box => box.textContent = '');
+        document.getElementById('message').textContent = "Find the O";
+    }
+
+    function makeGuess(index) {
+        document.querySelectorAll('.box')[index].textContent = arr[index];
+
+        if (arr[index] === 'O') {
+            document.getElementById('message').textContent = "You found the O! Tap any box to play again.";
+        } else {
+            document.getElementById('message').textContent = "Wrong! Try again.";
+        }
+
+        setTimeout(resetGame, 1000);
+    }
+
+    resetGame();
+</script>
+
+</body>
+</html>
