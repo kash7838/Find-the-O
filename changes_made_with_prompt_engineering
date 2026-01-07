@@ -1,0 +1,123 @@
+📌 CHANGE LOG — Find the Sequence (Full Feature History)
+🎯 1. Core Game Logic & Flow
+Added single‑player mode (1 player, 5 turns, final score).
+
+Added multiplayer mode (up to 3 players, turn‑based, 5 turns each).
+
+Added prevention of duplicate player names in multiplayer.
+
+Added automatic turn switching for multiplayer.
+
+Added final scorecard for both modes.
+
+Added ranking table for multiplayer only.
+
+Removed ranking for single‑player mode.
+
+Added “Reset Game” and “Play Again” functionality.
+
+Ensured game resets after all players complete 5 turns.
+
+🎨 2. UI / UX Enhancements
+Home Screen
+Centered Find the Sequence title vertically & horizontally.
+
+Centered Select Game Mode, Single Player, and Multiplayer buttons.
+
+Ensured centering works on both desktop and mobile.
+
+Name Entry Screens
+Added pink name‑entry boxes with black borders.
+
+Added single‑player name entry (previously missing).
+
+Added multiplayer name entry for up to 3 players.
+
+Added spacing between name entry and game options.
+
+Game Screen
+Increased size of X/O boxes.
+
+Styled boxes with:
+
+Bright yellow background
+
+Red letters
+
+Black borders
+
+Added Tetris‑style background to entire game.
+
+Added left‑side stats panel containing:
+
+Correct count
+
+Wrong count
+
+Turn indicator
+
+Removed pop‑ups for correct/wrong; replaced with live counters.
+
+Scorecard Screen
+Added Score Card title.
+
+Centered all scorecard content.
+
+Added bordered box for final results.
+
+Increased font size for:
+
+Game Over
+
+Score Card
+
+Rank list (multiplayer)
+
+🎨 3. Visual Design Improvements
+Changed game title color to white.
+
+Darkened the blue background.
+
+Improved spacing and alignment across all screens.
+
+Ensured consistent font sizes and layout hierarchy.
+
+🧩 4. Gameplay Improvements
+Added dynamic sequence generation (A, B, C variations).
+
+Ensured sequence changes every round.
+
+Added correct/wrong counters.
+
+Added turn indicator for multiplayer.
+
+Ensured each player gets exactly 5 turns.
+
+🛠 5. Bug Fixes
+Fixed broken sequence array syntax.
+
+Fixed multiplayer flow not progressing.
+
+Fixed layout breaking after mode selection.
+
+Fixed scorecard alignment issues.
+
+Fixed missing name entry for single player.
+
+Fixed the duplicate name issue in multiplayer.
+
+Fixed centering issues on mobile.
+
+Fixed game not loading after mode selection.
+
+📱 6. Responsiveness
+Ensured all screens scale properly on:
+
+Desktop
+
+Tablets
+
+Mobile phones
+
+Centered elements using flexbox for universal alignment.
+
